@@ -1,4 +1,4 @@
-# rabbit-with-delayed
+# rabbit-with-rabbitmq-delayed-exchange
 RabbitMQ Server with Delayed-Message0Exchange
 RabbitMQ 服务端镜像,以官方 rabbitmq:3.13-management 为基底,添加 rabbitmq-delayed-exchange 插件
 
