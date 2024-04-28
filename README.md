@@ -16,5 +16,5 @@ docker pull dygood/rabbitmq-dlx:latest
 
 ```bash
 # 启动镜像
-docker run -d --name rabbitmq-dlx -p 5672:5672 -p 15672:15672 dygood/rabbitmq-dlx:latest
+docker run --name rabbitmq -p 5672:5672 -p 15672:15672 -d --rm -it -e RABBITMQ_DEFAULT_USER=guest -e RABBITMQ_DEFAULT_PASS=guest dygood/rabbitmq-dlx:latest
 ```
