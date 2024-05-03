@@ -5,7 +5,7 @@ services:
     image: dygood/rabbitmq-dlx:latest
     hostname: rabbitserver
     environment:
-      - TZ=Asia/Shanghai
+      - TZ=Asia/Chongqing
       - RABBITMQ_DEFAULT_USER=admin
       - RABBITMQ_DEFAULT_PASS=a123456
     ports:
