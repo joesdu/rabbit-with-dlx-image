@@ -16,8 +16,14 @@ RabbitMQ 服务端镜像,以官方 rabbitmq:management 为基底,添加 [rabbitm
 ### Version
 
 - 3.13.x
+### 使用GitHub Packages
 
-### 使用
+```bash
+# 从GitHub Packages拉取镜像
+docker pull ghcr.io/joesdu/rabbitmq-dlx:latest
+```
+
+### 使用Docker Hub仓库
 
 ```bash
 # 直接拉取最新版镜像
