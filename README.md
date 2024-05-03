@@ -26,7 +26,7 @@ docker pull dygood/rabbitmq-dlx:latest
 
 ```bash
 # 本机快速启动镜像测试
-docker run --name rabbitmq -p 5672:5672 -p 15672:15672 -d --rm -it -e RABBITMQ_DEFAULT_USER=guest -e RABBITMQ_DEFAULT_PASS=guest dygood/rabbitmq-dlx:latest
+docker run --name rabbitmq -p 5672:5672 -p 15672:15672 -d --rm -it -e RABBITMQ_DEFAULT_USER=guest -e RABBITMQ_DEFAULT_PASS=guest ghcr.io/joesdu/rabbitmq-dlx:latest
 ```
 
 #### Docker Compose 使用例子
