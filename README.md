@@ -19,20 +19,23 @@ RabbitMQ 服务端镜像,以官方 rabbitmq:management 为基底,添加 [rabbitm
 
 ### 使用 GitHub Packages
 
+- 从 GitHub Packages 拉取镜像
+
 ```bash
-# 从GitHub Packages拉取镜像
 docker pull ghcr.io/joesdu/rabbitmq-dlx:latest
 ```
 
 ### 使用 Docker Hub 仓库
 
+- 直接拉取最新版镜像
+
 ```bash
-# 直接拉取最新版镜像
 docker pull dygood/rabbitmq-dlx:latest
 ```
 
+- 本机快速启动镜像测试
+
 ```bash
-# 本机快速启动镜像测试
 docker run --name rabbitmq -p 5672:5672 -p 15672:15672 -d --rm -it -e RABBITMQ_DEFAULT_USER=guest -e RABBITMQ_DEFAULT_PASS=guest ghcr.io/joesdu/rabbitmq-dlx:latest
 ```
 
