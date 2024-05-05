@@ -16,14 +16,15 @@ RabbitMQ 服务端镜像,以官方 rabbitmq:management 为基底,添加 [rabbitm
 ### Version
 
 - 3.13.x
-### 使用GitHub Packages
+
+### 使用 GitHub Packages
 
 ```bash
 # 从GitHub Packages拉取镜像
 docker pull ghcr.io/joesdu/rabbitmq-dlx:latest
 ```
 
-### 使用Docker Hub仓库
+### 使用 Docker Hub 仓库
 
 ```bash
 # 直接拉取最新版镜像
@@ -42,7 +43,7 @@ docker run --name rabbitmq -p 5672:5672 -p 15672:15672 -d --rm -it -e RABBITMQ_D
 
 services:
   rabbitmq:
-    image: dygood/rabbitmq-dlx:latest
+    image: ghcr.io/joesdu/rabbitmq-dlx:latest
     hostname: rabbitserver
     environment:
       - TZ=Asia/Chongqing

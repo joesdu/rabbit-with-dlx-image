@@ -5,7 +5,7 @@ FROM rabbitmq:management
 RUN rabbitmq-plugins enable rabbitmq_management
 
 # 添加插件到指定目录(可按照此方式自行扩展其他插件)
-ADD ./rabbitmq_delayed_message_exchange-3.13.0.ez /plugins
+ADD ./rabbitmq_delayed_message_exchange-*.ez /plugins
 
 # 开启延迟队列插件
 RUN rabbitmq-plugins enable rabbitmq_delayed_message_exchange
