@@ -26,6 +26,10 @@ jobs:
       id-token: write
 
     steps:
+      - name: Set release tag as environment variable
+        id: set_tag
+        run: echo "RELEASE_TAG=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
