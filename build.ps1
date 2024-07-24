@@ -2,7 +2,7 @@ $base = "dygood/" ;
 $name = "rabbitmq-dlx" ;
 
 # 构建 latest
-$tag = ":" + $RELEASE_TAG;
+$tag = ":" + $env:RELEASE_TAG;
 $imagename = $base + $name + $tag ;
 $imagename ;
 
