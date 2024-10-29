@@ -15,7 +15,7 @@ RabbitMQ 服务端镜像,以官方 rabbitmq:management 为基底,添加 [rabbitm
 
 ### Version
 
-- 3.13.x
+- 4.x
 
 ### 使用 GitHub Packages
 
