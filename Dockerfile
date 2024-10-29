@@ -1,5 +1,5 @@
 # 使用 rabbitmq:management 作为基础镜像,若是不需要管理页面可以使用rabbitmq:latest
-FROM rabbitmq:4.0.2-management
+FROM rabbitmq:4.0.3-management
 
 # 启用默认的 RabbitMQ 管理插件,同意若是不需要管理页面可以注释这行命令
 RUN rabbitmq-plugins enable rabbitmq_management
