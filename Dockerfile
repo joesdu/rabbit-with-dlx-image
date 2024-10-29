@@ -29,7 +29,7 @@ RUN rabbitmq-plugins enable rabbitmq_delayed_message_exchange
 # 暴露 RabbitMQ 端口(可选)
 # 如果您希望将 RabbitMQ 的端口暴露给外部,您可以在这里添加相应的 EXPOSE 命令.
 # 例如：
-#EXPOSE 5672 15671 15672
+#EXPOSE 4369 5671 5672 15691 15692 25672
 
 # 其他自定义配置(可选)
 # 如果您有其他自定义配置需求,您可以在这里添加相应的命令.
