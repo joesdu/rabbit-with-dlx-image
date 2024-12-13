@@ -1,8 +1,12 @@
 # 使用 rabbitmq:management 作为基础镜像,若是不需要管理页面可以使用rabbitmq:latest
 FROM rabbitmq:latest
 
-# 启用默认的 RabbitMQ 管理插件,同意若是不需要管理页面可以注释这行命令
+# 启用默认的 RabbitMQ 管理插件,若是不需要管理页面可以注释这行命令
 RUN rabbitmq-plugins enable rabbitmq_management
+# 开启 rabbitmq_mqtt 对应端口 1883
+RUN rabbitmq-plugins enable rabbitmq_mqtt
+# 开启 rabbitmq_web_mqtt 对应端口 15675
+RUN rabbitmq-plugins enable rabbitmq_web_mqtt
 
 # 添加插件到指定目录(可按照此方式自行扩展其他插件)
 ADD ./rabbitmq_delayed_message_exchange-*.ez /plugins
