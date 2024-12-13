@@ -9,9 +9,6 @@ RabbitMQ 服务端镜像,以官方 rabbitmq:management 为基底,添加 [rabbitm
 | :-----------: | ----------------------------- |
 |  linux/amd64  | AMD,Intel PC 和其他服务器产品 |
 |  linux/arm64  | ARM64 位设备,树莓派等         |
-| linux/arm/v7  | 旧版树莓派,其他国产派         |
-| linux/ppc64le | 没见过                        |
-|  linux/s390x  | 没见过                        |
 
 ### Version
 
