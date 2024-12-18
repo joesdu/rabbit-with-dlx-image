@@ -23,6 +23,9 @@ RUN set -eux; \
 # 开启延迟队列插件
 RUN rabbitmq-plugins enable rabbitmq_delayed_message_exchange
 
+# Opt-in to enable Khepri.
+RUN rabbitmqctl enable_feature_flag --experimental khepri_db
+
 # 创建新的虚拟主机和管理员用户(可选)
 # 如果您希望创建新的虚拟主机和管理员用户,您可以在这里添加相应的命令.
 
