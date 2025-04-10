@@ -20,21 +20,18 @@ RUN set -eux; \
 	apt-get install -y --no-install-recommends python3; \
 	rm -rf /var/lib/apt/lists/*; \
 	rabbitmqadmin --version
-# Opt-in to enable Khepri.
-RUN rabbitmqctl enable_feature_flag --experimental khepri_db
+
 # 开启延迟队列插件
 RUN rabbitmq-plugins enable rabbitmq_delayed_message_exchange
 
-# 创建新的虚拟主机和管理员用户(可选)
-# 如果您希望创建新的虚拟主机和管理员用户,您可以在这里添加相应的命令.
+# 复制并设置启动脚本
+COPY entrypoint.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/entrypoint.sh
 
-# 暴露 RabbitMQ 端口(可选)
-# 如果您希望将 RabbitMQ 的端口暴露给外部,您可以在这里添加相应的 EXPOSE 命令.
-# 例如：
-#EXPOSE 4369 5671 5672 15691 15692 25672
+# 使用自定义启动脚本作为入口点
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
-# 其他自定义配置(可选)
-# 如果您有其他自定义配置需求,您可以在这里添加相应的命令.
+# 暴露 RabbitMQ 端口（可选）
+# EXPOSE 4369 5671 5672 15691 15692 25672
 
-# 启动 RabbitMQ 服务
-ENTRYPOINT ["rabbitmq-server"]
+#CMD ["rabbitmq-server"]
