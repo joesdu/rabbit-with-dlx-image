@@ -20,6 +20,8 @@ RUN set -eux; \
 	apt-get install -y --no-install-recommends python3; \
 	rm -rf /var/lib/apt/lists/*; \
 	rabbitmqadmin --version
+# Opt-in to enable Khepri.
+RUN rabbitmqctl enable_feature_flag --experimental khepri_db
 # 开启延迟队列插件
 RUN rabbitmq-plugins enable rabbitmq_delayed_message_exchange
 
