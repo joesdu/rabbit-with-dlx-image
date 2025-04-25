@@ -24,14 +24,14 @@ RUN set -eux; \
 # 开启延迟队列插件
 RUN rabbitmq-plugins enable rabbitmq_delayed_message_exchange
 
-# 复制并设置启动脚本
-COPY entrypoint.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/entrypoint.sh
+# # 复制并设置启动脚本
+# COPY entrypoint.sh /usr/local/bin/
+# RUN chmod +x /usr/local/bin/entrypoint.sh
 
-# 使用自定义启动脚本作为入口点
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+# # 使用自定义启动脚本作为入口点
+# ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
 # 暴露 RabbitMQ 端口（可选）
 # EXPOSE 4369 5671 5672 15691 15692 25672
 
-#CMD ["rabbitmq-server"]
+CMD ["rabbitmq-server"]
