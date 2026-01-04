@@ -14,7 +14,7 @@ RUN set -eux; \
 	[ -s /usr/local/bin/rabbitmqadmin ]; \
 	chmod +x /usr/local/bin/rabbitmqadmin; \
 	apk upgrade --no-cache; \
-    apk add --no-cache python3; \
+	apk add --no-cache python3; \
 	rm -rf /var/lib/apt/lists/*; \
 	rabbitmqadmin --version
 
