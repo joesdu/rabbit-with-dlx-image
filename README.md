@@ -1,3 +1,10 @@
+## **重要**
+
+**该库将存档不在维护和更新**
+
+**原因** 由于rabbitmq-delayed-exchange不再提供支持,可能从RabbitMQ 4.3.x或者4.4.x开始将不再兼容,所以该库也随之不再继续维护.
+
+
 # rabbit-with-rabbitmq-delayed-exchange
 
 [RabbitMQ Server](https://www.rabbitmq.com) with Delayed-Message0Exchange
